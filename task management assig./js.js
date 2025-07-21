@@ -63,7 +63,7 @@ function displayTasks() {
     })
     .forEach(task => {
       const li = document.createElement('li');
-      li.className = task.completed ? 'completed' : '';
+      li.className = task.completed  ?'completed' : '';
 
       li.innerHTML = `
         <span>

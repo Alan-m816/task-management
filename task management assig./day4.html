@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>check grade</h1>
+    <input type="number" id="mark" placeholder="enter your mark">
+    <button onclick="checkgrade ()">check</button>
+    <p id="result"> </p>
+    <script>
+        function checkgrade (){
+            const marks =  parseFloat(document.getElementById("mark").value);
+            const result = document.getElementById("result");
+
+            if(marks >= 90){
+                result.textContent= " good:A+"
+            }
+            else if(marks >= 60){
+                result.textContent= " good:A"
+            }
+            else if(marks >= 50){
+                result.textContent= " good:"
+            }else {
+                result.textContent= " studyhard"
+            }
+            
+        }
+    </script>
+</body>
+</html>

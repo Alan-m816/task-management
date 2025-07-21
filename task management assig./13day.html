@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>day 13</h1>
+    <input type="text" id="input"placeholder= "enter task">
+    <button id="btn">add task</button>
+    <ul id="list"> </ul>
+      <script>
+    const task = [];
+
+    document.getElementById("btn").addEventListener("click", function () {
+      const input = document.getElementById("input");
+      const taskText = input.value.trim();
+
+      if (taskText === "") {
+        alert("Fill up");
+        return;
+      }
+
+      task.push(taskText);
+
+      const li = document.createElement("li");
+      li.textContent = taskText;
+
+      li.addEventListener("click", function () {
+        li.remove();
+      });
+
+      document.getElementById("list").appendChild(li);
+      input.value = "";
+    });
+  </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head><title>Day 13</title></head>
+<body>
+
+
+    
+  <!-- <h1>Day 13</h1>
+  <input type="text" id="input" placeholder="Enter task" />
+  <button id="btn">Add Task</button>
+  <ul id="list"></ul>
+
+  <script>
+    const task = [];
+
+    document.getElementById("btn").addEventListener("click", function () {
+      const input = document.getElementById("input");
+      const taskText = input.value.trim();
+
+      if (taskText === "") {
+        alert("Fill up");
+        return;
+      }
+
+      task.push(taskText);
+
+      const li = document.createElement("li");
+      li.textContent = taskText;
+
+      li.addEventListener("click", function () {
+        li.remove();
+      });
+
+      document.getElementById("list").appendChild(li);
+      input.value = "";
+    });
+  </script>
+</body>
+</html> -->

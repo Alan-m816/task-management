@@ -1,0 +1,89 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>day 14</h1>
+    <input type="text" id="input" placeholder="task">
+    <button id="btn">add task</button>
+    <ul id="list"></ul>
+    <script>
+        const task = [];
+        document.getElementById("btn").addEventListener("click",
+            function (){
+                const input=
+                 document.getElementById("input");
+                 const title = 
+                 input.value.trim();
+
+                 if(title == ""){
+                    alert("enter nahh");
+                    return
+                 }
+                 const task ={
+                    title: title,
+                    completed: false
+                 };
+                 task.push (task);
+                 const li =
+                 Document.createElement("li");
+                 li.textContent = task.title;
+                 li .addEventListener("click",
+                    function(){
+                        task.completed = !task.completed;
+                        li. style.textDecoration =task.completed ?"line-through":"none";
+                    });
+                    document.getElementById(list).appendChild(li);
+                    inpute.value ="";
+            })
+    </script>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Day 14</h1>
+    <input type="text" id="input" placeholder="Enter task" />
+    <button id="btn">Add Task</button>
+    <ul id="list"></ul>
+
+    <script>
+      const tasks = [];
+
+      document.getElementById("btn").addEventListener("click", function () {
+        const input = document.getElementById("input");
+        const title = input.value.trim();
+
+        if (title === "") {
+          alert("Enter a task!");
+          return;
+        }
+
+        const task = {
+          title: title,
+          completed: false
+        };
+
+        tasks.push(task);
+
+        const li = document.createElement("li");
+        li.textContent = task.title;
+
+        li.addEventListener("click", function () {
+          task.completed = !task.completed;
+          li.style.textDecoration = task.completed ? "line-through" : "none";
+        });
+
+        document.getElementById("list").appendChild(li);
+        input.value = "";
+      });
+    </script>
+  </body>
+</html>

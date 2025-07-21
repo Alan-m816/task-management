@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>day 11</h1>
+    <div id="counter">0</div> <br>
+    <button id="increase">increase</button>
+    <button id="decrease">decrease</button>
+    <button id="reset">reset</button>
+    <script>
+        let count = 0
+        const countDisplay = document.getElementById ("counter")
+        document.getElementById("increase"). addEventListener ("click", ()=> {
+            count ++;
+            countDisplay.textContent = count
+        });
+        document.getElementById("decrease"). addEventListener ("click", ()=> {
+            count --;
+            countDisplay.textContent = count
+        });
+        document.getElementById("reset"). addEventListener ("click", ()=> {
+            count =0;
+            countDisplay.textContent = count
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>day 15</h1>
+    <input type="text" id="input" placeholder="add task">
+    <button id="btn"></button>
+    <ul id="list"></ul>
+    <script>
+        const task = [];
+        document.getElementById("btn").addEventListener("click",
+            function(){
+                const input =
+                document.getElementById("input");
+                const title = input.value.trim();
+                if (title ===""){
+                    alert("pls enter")
+                }
+                const task = {
+                    title,
+                    completed: false,
+                }
+                task.push(task);
+                const li = 
+                document.createElement("li")
+                li.textContent = task.title;
+
+                li.addEventListener("click", 
+                    function(){
+                        task.completed =! task.completed;
+                        li =task.completed
+
+                    });
+                    const delbtn =
+                    document.createElement("button");
+                    editbtn.textContent ="u";
+                    delbtn.addEventListener("click",
+                        function(e) {
+                            e.stopPropagation();
+
+                            li.remove();
+                        })
+
+                        const editbtn =
+                        document.createElement("button");
+                        editbtn.textContent ="i";
+                        editbtn. addEventListener("click",function(e){
+                            e.stopPropagation();
+                            const newtitle = prompt("edit task:", task.title);
+                            if (newtitle !==null &&
+                                newtitle.trim()!== ""){
+                                    task.title = newtitle.trim();
+                                    li. textContent = task.title;
+                                    li.appendChild(editbtn)
+                                    li.appendChild(delbtn);
+                                }
+                            
+                        })
+                        li.appendChild(editbtn);
+                        li. appendChild(delbtn);
+
+                        document.getElementById("list").appendChild(li);
+                        inpute.value ="";
+                
+            })
+    </script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>day 15</h1>
+    ,<h1>Day 15 - To-Do App</h1>
+<input type="text" id="input" placeholder="Add a task" />
+<button id="btn">Add Task</button>
+<ul id="list"></ul>
+    <script>
+        const tasks = [];
+
+document.getElementById("btn").addEventListener("click", function () {
+  const input = document.getElementById("input");
+  const title = input.value.trim();
+  if (title === "") {
+    alert("Please enter a task");
+    return;
+  }
+
+  const task = {
+    title,
+    completed: false,
+  };
+  tasks.push(task);
+
+  const li = document.createElement("li");
+  li.textContent = task.title;
+
+  // Toggle complete
+  li.addEventListener("click", function () {
+    task.completed = !task.completed;
+    li.style.textDecoration = task.completed ? "line-through" : "none";
+  });
+
+  // 🗑️ Delete button
+  const delBtn = document.createElement("button");
+  delBtn.textContent = "🗑️";
+  delBtn.addEventListener("click", function (e) {
+    e.stopPropagation(); // prevent toggling complete
+    li.remove();
+  });
+
+  // ✏️ Edit button
+  const editBtn = document.createElement("button");
+  editBtn.textContent = "✏️";
+  editBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    const newTitle = prompt("Edit task:", task.title);
+    if (newTitle !== null && newTitle.trim() !== "") {
+      task.title = newTitle.trim();
+      li.textContent = task.title;
+      li.appendChild(editBtn);
+      li.appendChild(delBtn);
+    }
+  });
+
+  li.appendChild(editBtn);
+  li.appendChild(delBtn);
+  document.getElementById("list").appendChild(li);
+  input.value = "";
+});
+    </script>
+</body>
+</html>
+
+
+

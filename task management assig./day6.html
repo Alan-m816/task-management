@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="my form">
+        <input type="text" id="username" placeholder="enter name">
+        <button id="submit">submit</button>
+    </form>
+    <p id="result"></p>
+    <!-- .................................................. -->
+     <button id="change"> clickme</button>
+     <p id="dm">old text</p>
+
+
+    <button></button>
+    <script>
+        const form =document.getElementById("my form");
+        const input =document.getElementById("username");
+        const result =document.getElementById("result");
+        form.addEventListener("submit", 
+        function(e) {
+            e.preventDefault();
+            const value = input.value;
+            result.textContent = ` hello, ${value}`;
+            input.value = "";
+        });
+        {
+            const btn = document.getElementById("change")
+            const text = document.getElementById("dm")
+            btn.addEventListener("click", 
+                function(){
+                    text.textContent = "new text";
+                }
+            )
+        }
+        
+    </script>
+</body>
+</html>
+
+

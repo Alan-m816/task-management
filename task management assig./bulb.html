@@ -1,0 +1,78 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Bulb Toggle</title>
+</head>
+<body>
+
+  <h2>Light Bulb Toggle</h2>
+  <img id="bulb" src="https://www.w3schools.com/js/pic_bulboff.gif" width="100">
+  <br><br>
+  <button id="toggleBtn">Turn On</button>
+  
+
+  <script>
+    {
+        
+        const light = document.getElementById("bulb");
+        const btn = document.getElementById("toggleBtn");
+
+        btn.addEventListener ("click", 
+            function(){
+              if ( light.src.includes("bulboff")) { 
+                 light.src="https://www.w3schools.com/js/pic_bulbon.gif" 
+                btn.textContent= "Turn off";
+               } else {
+                light.src= "https://www.w3schools.com/js/pic_bulboff.gif" 
+                btn.textContent= "Turn on";
+               }
+            }
+        )
+    }
+  </script>
+
+</body>
+</html> -->
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Light Bulb</title>
+</head>
+<body>
+
+  <h2>Light Bulb On/Off</h2>
+
+  <img id="bulb" src="https://www.w3schools.com/js/pic_bulboff.gif" width="100">
+  <br><br>
+  <button onclick="toggleBulb()">Turn ON/OFF</button>
+
+  <script>
+    let isOn = false;
+
+    function toggleBulb() {
+      const ok = document.getElementById("bulb");
+
+      if (isOn) {
+        ok.src = "https://www.w3schools.com/js/pic_bulboff.gif";
+        isOn = false;
+      } else {
+        ok.src = "https://www.w3schools.com/js/pic_bulbon.gif";
+        isOn = true;
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+

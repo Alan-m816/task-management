@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="count"></h2>
+    <button id="btn">click me</button>
+    <button id="decrease"> decrease</button>
+    <button id="reset"> reset</button>
+    <script>
+        {
+            const countdisp = document.getElementById("count");
+            const button = document.getElementById ("btn");
+            const decreasebtn = document.getElementById ("decrease");
+            const resetbtn = document.getElementById ("reset");
+
+
+
+            let count = 0;
+
+
+            function display() {
+                countdisp . textContent =count
+                if (count > 0) {
+                    countdisp.style.color = "green"
+                }else if (count < 0){countdisp.style.color = "red"
+                }else {countdisp.style.color = "black"}
+            }
+            button.addEventListener("click",
+            function () {
+                count++
+                display();
+            });
+
+
+            decreasebtn.addEventListener("click",
+            function () {
+                count--
+                display();})
+
+
+                resetbtn.addEventListener("click",
+            function () {
+                count =0
+                display ();});
+        }
+    </script>
+</body>
+</html>

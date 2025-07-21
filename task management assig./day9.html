@@ -1,0 +1,26 @@
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Click the Box!</h2>
+    <div id="box" style="width:100px; height:100px; background-color:gray;"></div>
+
+    <script>
+      const box = document.getElementById("box");
+
+      box.addEventListener("click", function(e) {
+        // Log the event object
+        console.log(e);
+
+        // Change the box color when clicked
+        box.style.backgroundColor = "blue";
+        box.style.borderRadius = "10px";
+        box.style.border = "2px solid black";
+      });
+    </script>
+  </body>
+</html>
